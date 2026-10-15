@@ -1,0 +1,61 @@
+ManagerID,ManagerName,Department,ManagerTenureYears,SpanOfControl
+MGR-ENG-01,Ethan Kowalski,Engineering,2.1,22
+MGR-ENG-02,Priya Wolfe,Engineering,6.3,24
+MGR-ENG-03,Mei Kowalski,Engineering,1.0,13
+MGR-ENG-04,Lena Nakamura,Engineering,4.2,25
+MGR-ENG-05,Ravi Nakamura,Engineering,7.9,17
+MGR-ENG-06,Clara Jensen,Engineering,5.1,18
+MGR-ENG-07,Kenji Shah,Engineering,3.8,19
+MGR-ENG-08,Ana Lindqvist,Engineering,1.1,19
+MGR-ENG-09,Ruth Osei,Engineering,1.1,20
+MGR-ENG-10,Sofia Murphy,Engineering,3.7,26
+MGR-ENG-11,Nora Mendes,Engineering,7.9,23
+MGR-ENG-12,Isla Lindqvist,Engineering,7.3,24
+MGR-ENG-13,Theo Ivanova,Engineering,8.2,12
+MGR-PRD-01,Amara Wolfe,Product,8.9,15
+MGR-PRD-02,Mei Brennan,Product,3.6,17
+MGR-PRD-03,Tessa Ivanova,Product,3.1,12
+MGR-DAT-01,Liam Moreau,Data,6.1,13
+MGR-DAT-02,Elena Wolfe,Data,8.8,15
+MGR-DAT-03,Liam Kim,Data,7.1,13
+MGR-SAL-01,Ines Petrov,Sales,8.3,33
+MGR-SAL-02,Freya Silva,Sales,1.9,19
+MGR-SAL-03,Priya Nakamura,Sales,7.4,13
+MGR-SAL-04,Ana Ali,Sales,2.4,20
+MGR-SAL-05,Andre Park,Sales,4.3,27
+MGR-SAL-06,Aarav Adeyemi,Sales,3.8,14
+MGR-SAL-07,Viktor Nakamura,Sales,6.9,11
+MGR-SAL-08,Ines Fischer,Sales,5.6,22
+MGR-SAL-09,Simone Hughes,Sales,7.2,21
+MGR-SAL-10,Rohan Fischer,Sales,3.4,21
+MGR-SAL-11,Ravi Reyes,Sales,5.6,11
+MGR-SAL-12,Liam Costa,Sales,5.5,23
+MGR-SAL-13,Liam Bauer,Sales,6.5,23
+MGR-SAL-14,Isla Kim,Sales,7.2,21
+MGR-SAL-15,Daniel Hughes,Sales,4.7,26
+MGR-SUP-01,Grace Park,Customer Support,6.3,21
+MGR-SUP-02,Amara Murphy,Customer Support,8.2,21
+MGR-SUP-03,Ivan Kim,Customer Support,6.8,25
+MGR-SUP-04,Tessa Ali,Customer Support,4.4,19
+MGR-SUP-05,Nora Chen,Customer Support,7.9,17
+MGR-SUP-06,Diego Murphy,Customer Support,2.5,16
+MGR-SUP-07,Julia Park,Customer Support,3.2,22
+MGR-SUP-08,Hana Fischer,Customer Support,3.4,23
+MGR-SUP-09,Julia Mehta,Customer Support,8.5,23
+MGR-SUP-10,Amara Reyes,Customer Support,7.4,17
+MGR-SUP-11,Clara Ali,Customer Support,3.2,19
+MGR-SUP-12,Julia Nair,Customer Support,3.7,21
+MGR-SUP-13,Zara Dubois,Customer Support,1.9,18
+MGR-MKT-01,Caleb Nakamura,Marketing,8.1,18
+MGR-MKT-02,Julia Mendes,Marketing,2.9,21
+MGR-MKT-03,Felix Rossi,Marketing,4.2,23
+MGR-MKT-04,Diego Varga,Marketing,8.7,22
+MGR-MKT-05,Ravi Rossi,Marketing,5.8,25
+MGR-MKT-06,Zara Lindqvist,Marketing,4.1,19
+MGR-FIN-01,Ruth Petrov,Finance,3.6,27
+MGR-FIN-02,Clara Petrov,Finance,2.8,15
+MGR-FIN-03,Daniel Osei,Finance,7.1,20
+MGR-FIN-04,Aarav Kowalski,Finance,1.3,14
+MGR-HR-01,Simone Shah,Human Resources,1.8,19
+MGR-HR-02,Arjun Rossi,Human Resources,1.9,21
+MGR-HR-03,Rohan Bauer,Human Resources,7.2,18

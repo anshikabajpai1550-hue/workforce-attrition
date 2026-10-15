@@ -1,0 +1,9 @@
+Department,IsCriticalProductTeam,ReplacementCostMultiplier,AvgTimeToFillDays
+Engineering,Yes,0.5,62
+Product,Yes,0.5,55
+Data,Yes,0.5,58
+Sales,No,0.3,38
+Customer Support,No,0.2,24
+Marketing,No,0.3,40
+Finance,No,0.3,45
+Human Resources,No,0.3,42

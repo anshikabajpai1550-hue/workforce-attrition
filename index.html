@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product-Team Attrition Case Study | [Your Name]</title>
+  <meta name="description" content="Business analysis case study: why product-team attrition hit 22% at a mid-sized tech firm, and a plan to bring it down. SQL, Excel and Power BI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="brand">[Your Name] <span class="brand-sub">Business Analyst</span></span>
+      <nav aria-label="Sections">
+        <a href="#problem">Problem</a>
+        <a href="#findings">Findings</a>
+        <a href="#actions">Recommendations</a>
+        <a href="#business-case">Business case</a>
+        <a href="#approach">Approach</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <p class="kicker reveal">Workforce Attrition &amp; Retention Analytics · Case study</p>
+      <div class="hero-grid">
+        <div class="hero-number reveal" aria-hidden="true">22<span>%</span></div>
+        <div class="hero-copy">
+          <h1 class="reveal">Product-team attrition jumped to 22%. Here’s why, and how to bring it back down.</h1>
+          <p class="lede reveal">At NimbusTech, a 1,200-person software company, people leaving Engineering, Product and Data teams added <strong>$1.8M</strong> in replacement hiring costs in a single year. I analyzed three years of workforce data to find the causes and build a costed retention plan.</p>
+          <div class="cta-row reveal">
+            <a class="btn btn-primary" href="#actions">See the recommendations</a>
+            <a class="btn btn-ghost" href="#dashboard">View the dashboard</a>
+          </div>
+        </div>
+      </div>
+      <dl class="hero-stats reveal">
+        <div><dt>Attrition, product teams 2025</dt><dd>21.7% <small>up from 14.0%</small></dd></div>
+        <div><dt>Extra replacement cost vs 2024</dt><dd>+$1.77M</dd></div>
+        <div><dt>Product-team employees lost in 2025</dt><dd>73</dd></div>
+        <div><dt>Voluntary leavers who were top performers</dt><dd>42%</dd></div>
+      </dl>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem" class="band">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="section-num">01</span>
+          <h2>The problem</h2>
+        </header>
+        <div class="two-col">
+          <div class="prose">
+            <p class="big">The rest of the company held steady at about 13–14%. Product teams went from <strong>12% to 22%</strong> in two years.</p>
+            <p>These teams build the product, so every exit means lost delivery time, roughly two months to backfill each role, and the cost of recruiting and onboarding. Replacement costs for these teams rose from <strong>$2.9M in 2024 to $4.7M in 2025</strong>.</p>
+            <p class="muted small">Attrition rate = people who left during the year ÷ average headcount. Replacement cost = 50% of annual salary per leaver for product roles, at the low end of industry estimates (50–200%).</p>
+          </div>
+          <figure class="chart-card">
+            <figcaption>Annual attrition rate</figcaption>
+            <div class="chart-box"><canvas id="chartTrend" role="img" aria-label="Line chart: product-team attrition 11.9% in 2023, 14.0% in 2024, 21.7% in 2025; rest of company 12.9%, 13.4%, 14.0%"></canvas></div>
+          </figure>
+        </div>
+
+        <h3 class="sub">The questions I set out to answer</h3>
+        <ol class="questions">
+          <li>Where is attrition concentrated?</li>
+          <li>Why are people leaving?</li>
+          <li>When in their time at the company do they leave?</li>
+          <li>What is it costing, and what would fixing it save?</li>
+          <li>Who is most at risk of leaving next?</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FINDINGS -->
+    <section id="findings" class="wrap">
+      <header class="section-head">
+        <span class="section-num">02</span>
+        <h2>What I found</h2>
+      </header>
+      <p class="section-intro">Five clear causes, and they overlap. Burnout, manager issues and stalled careers together explain nearly 70% of 2025 exits from product teams.</p>
+
+      <article class="finding">
+        <div class="finding-text">
+          <span class="finding-tag">Finding 1 · Burnout</span>
+          <h3>Working more than 20 hours of overtime a month doubles the chance of leaving.</h3>
+          <p>27% of heavy-overtime employees left in 2025, compared with 13% of everyone else. Product teams now average 18 overtime hours a month, almost twice the rest of the company (10). Exits citing burnout rose from 5 in 2024 to <strong>21 in 2025</strong>, making it the top exit reason.</p>
+          <p class="so-what"><strong>What it means:</strong> the 2025 release pace is not sustainable, and it is the single biggest driver.</p>
+        </div>
+        <figure class="chart-card">
+          <figcaption>% who left in 2025, by monthly overtime</figcaption>
+          <div class="chart-box"><canvas id="chartOvertime" role="img" aria-label="Bar chart: 10.3% left with 0-10 overtime hours, 13.4% with 11-20, 27.1% with over 20"></canvas></div>
+        </figure>
+      </article>
+
+      <article class="finding">
+        <div class="finding-text">
+          <span class="finding-tag">Finding 2 · Managers</span>
+          <h3>Two managers account for half of all Engineering exits.</h3>
+          <p>Their teams make up 19% of Engineering but lost <strong>28 of 56</strong> Engineering leavers in 2025: a 47% leaving rate against 11% for other teams. Both have been managers for only about a year, and their teams report the lowest job satisfaction.</p>
+          <p class="so-what"><strong>What it means:</strong> a targeted fix with fast payback. Coaching first-time managers works better than a company-wide program.</p>
+        </div>
+        <figure class="chart-card">
+          <figcaption>% of team who left in 2025, Engineering managers</figcaption>
+          <div class="chart-box tall"><canvas id="chartManagers" role="img" aria-label="Bar chart: two managers lost 52% and 42% of their teams; the other eleven ranged from 4% to 20%"></canvas></div>
+        </figure>
+      </article>
+
+      <article class="finding">
+        <div class="finding-text">
+          <span class="finding-tag">Finding 3 · Career growth</span>
+          <h3>No promotion in two years makes people three times more likely to leave.</h3>
+          <p>Among employees with 2+ years at the company, 20% of those not promoted recently left, against 6% of those who were. Promotions in product teams slowed sharply in 2024–25, and job satisfaction is lower in the not-promoted group (2.7 vs 3.5 out of 5).</p>
+          <p class="so-what"><strong>What it means:</strong> people can’t see a path forward, so they find one somewhere else.</p>
+        </div>
+        <figure class="chart-card">
+          <figcaption>% who left in 2025 (employees with 2+ years’ tenure)</figcaption>
+          <div class="chart-box"><canvas id="chartPromo" role="img" aria-label="Bar chart: 19.6% left with no promotion in 2+ years versus 5.9% promoted recently"></canvas></div>
+        </figure>
+      </article>
+
+      <article class="finding">
+        <div class="finding-text">
+          <span class="finding-tag">Finding 4 · Pay</span>
+          <h3>Pay matters, but only for senior staff.</h3>
+          <p>Senior employees paid 10%+ below market left at <strong>40%</strong>, four times the rate of seniors paid at market (10%). Junior staff are almost all paid at market and still leave, so pay is not their reason. A company-wide raise would spend money where it doesn’t help.</p>
+          <p class="so-what"><strong>What it means:</strong> make targeted adjustments for a small group, not across-the-board raises.</p>
+        </div>
+        <figure class="chart-card">
+          <figcaption>% of senior staff (L3–L5) who left in 2025</figcaption>
+          <div class="chart-box"><canvas id="chartPay" role="img" aria-label="Bar chart: 40% of underpaid seniors left versus 9.9% of seniors paid at market"></canvas></div>
+        </figure>
+      </article>
+
+      <article class="finding">
+        <div class="finding-text">
+          <span class="finding-tag">Finding 5 · First year</span>
+          <h3>One in three leavers quits within their first year.</h3>
+          <p>26% of employees in their first year left in 2025, almost three times the rate of people in their second year (9%). The most common reason early leavers give is their manager (9 of 25), so new hires are landing in the two struggling teams from Finding 2.</p>
+          <p class="so-what"><strong>What it means:</strong> fixing those two teams also fixes onboarding. Every early exit means paying the hiring cost twice.</p>
+        </div>
+        <figure class="chart-card">
+          <figcaption>% who left in 2025, by time at the company</figcaption>
+          <div class="chart-box"><canvas id="chartTenure" role="img" aria-label="Bar chart: 25.8% under 1 year, 8.9% 1-2 years, 13.2% 2-4 years, 18.0% 4+ years"></canvas></div>
+        </figure>
+      </article>
+
+      <aside class="callout">
+        <p><strong>The costliest part:</strong> 30 of the 72 voluntary leavers were top performers (rated 4–5 out of 5). Replacing them alone costs about <strong>$1.9M</strong>.</p>
+      </aside>
+
+      <h3 class="sub">What the data ruled out</h3>
+      <p class="section-intro narrow">Ruling these out saves budget for the fixes that work.</p>
+      <ul class="ruled-out">
+        <li><span class="ro-label">Commute distance</span><span class="ro-value">16% vs 18%</span><span class="ro-note">Long commutes (20+ miles) don’t raise exits. Commute perks won’t help.</span></li>
+        <li><span class="ro-label">Remote vs office</span><span class="ro-value">15–18%</span><span class="ro-note">Similar across remote, hybrid and onsite. Not a work-location issue.</span></li>
+        <li><span class="ro-label">Gender</span><span class="ro-value">17% vs 18%</span><span class="ro-note">No meaningful gap between men and women. A good fairness check.</span></li>
+      </ul>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section id="actions" class="band">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="section-num">03</span>
+          <h2>What I recommend</h2>
+        </header>
+        <p class="section-intro">Six actions in priority order. Each one targets a cause found above.</p>
+        <ol class="actions">
+          <li>
+            <span class="a-when">Next 30 days</span>
+            <div>
+              <h3>Hold stay interviews with the 43 highest-risk employees</h3>
+              <p>A simple risk score (overtime, time since promotion, pay vs market, manager, tenure) flags 43 current employees, including 13 top performers. HR business partners meet each one this month.</p>
+              <span class="a-owner">Owner: HR Business Partners</span>
+            </div>
+          </li>
+          <li>
+            <span class="a-when">0–3 months</span>
+            <div>
+              <h3>Support the two high-attrition Engineering teams</h3>
+              <p>Coaching and skip-level check-ins for both managers, plus a first-time manager program for everyone promoted into management.</p>
+              <span class="a-owner">Owner: Engineering Director + HR</span>
+            </div>
+          </li>
+          <li>
+            <span class="a-when">0–3 months</span>
+            <div>
+              <h3>Put guardrails on overtime</h3>
+              <p>Flag anyone above 20 overtime hours for two months running. Plan sprints against real team capacity, and use contractors for release crunches.</p>
+              <span class="a-owner">Owner: VP Engineering</span>
+            </div>
+          </li>
+          <li>
+            <span class="a-when">Next pay cycle</span>
+            <div>
+              <h3>Raise pay for the 15 senior staff paid furthest below market</h3>
+              <p>Raising them to 95% of market costs about <strong>$241K a year</strong>. Replacing one of them costs about $76K, so keeping just 4 of the 15 covers the cost.</p>
+              <span class="a-owner">Owner: Finance + HR</span>
+            </div>
+          </li>
+          <li>
+            <span class="a-when">3–6 months</span>
+            <div>
+              <h3>Publish career ladders and review promotions every 12 months</h3>
+              <p>Clear criteria for each level and a guaranteed yearly conversation, so no one goes two years without a growth discussion.</p>
+              <span class="a-owner">Owner: People team</span>
+            </div>
+          </li>
+          <li>
+            <span class="a-when">3–6 months</span>
+            <div>
+              <h3>Rebuild the first 90 days</h3>
+              <p>An onboarding buddy outside the new hire’s reporting line, plus HR check-ins at 30, 60 and 90 days, so early problems with a manager or role surface before the person leaves.</p>
+              <span class="a-owner">Owner: Hiring managers + Talent Acquisition</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BUSINESS CASE -->
+    <section id="business-case" class="wrap">
+      <header class="section-head">
+        <span class="section-num">04</span>
+        <h2>The business case</h2>
+      </header>
+      <div class="calc">
+        <div class="calc-input">
+          <label for="target">Target product-team attrition rate</label>
+          <output id="targetOut" for="target">14.0%</output>
+          <input type="range" id="target" min="10" max="21" step="0.5" value="14">
+          <div class="range-scale"><span>10%</span><span>Today: 21.7%</span></div>
+          <p class="muted small">Based on 2025 figures: average headcount of 336 and an average replacement cost of $64K per leaver.</p>
+        </div>
+        <div class="calc-output" aria-live="polite">
+          <div><span class="co-label">Fewer people leaving each year</span><span class="co-value" id="leaversOut">26</span></div>
+          <div class="co-main"><span class="co-label">Annual savings</span><span class="co-value" id="savingsOut">$1.66M</span></div>
+        </div>
+      </div>
+      <p class="section-intro narrow">Getting back to the 2024 level (14%) saves about <strong>$1.66M a year</strong>, which recovers most of the $1.8M increase. That estimate doesn’t include the productivity lost while roles sit empty.</p>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="band">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="section-num">05</span>
+          <h2>The dashboard</h2>
+        </header>
+        <p class="section-intro">A Power BI report HR can use every month to track attrition and act on risk early.</p>
+        <figure class="dash-frame">
+          <img src="images/dashboard-overview.png" alt="Power BI dashboard overview page: attrition KPIs, trend and department breakdown" onerror="this.parentElement.classList.add('is-empty')">
+          <figcaption class="dash-placeholder">Dashboard screenshot goes here: <code>images/dashboard-overview.png</code></figcaption>
+        </figure>
+        <ul class="dash-pages">
+          <li><strong>Overview</strong> Headcount, attrition rate, cost and trend</li>
+          <li><strong>Why people leave</strong> Exit reasons, overtime, promotions, pay</li>
+          <li><strong>Who and when</strong> Tenure, teams, managers</li>
+          <li><strong>Risk &amp; savings</strong> At-risk list and savings scenarios</li>
+        </ul>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Open the interactive dashboard</a>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" class="wrap">
+      <header class="section-head">
+        <span class="section-num">06</span>
+        <h2>How I did it</h2>
+      </header>
+      <ol class="steps">
+        <li>
+          <span class="step-tool">Excel</span>
+          <h3>Checked and cleaned the data</h3>
+          <p>Found and fixed 15 duplicate records, 20 missing salaries, 25 inconsistent department names and 8 records with impossible dates, so every number after this point can be trusted.</p>
+        </li>
+        <li>
+          <span class="step-tool">SQL</span>
+          <h3>Answered the business questions</h3>
+          <p>Broke attrition down by team, reason, tenure, workload, pay and manager, and built the risk score that flags who to talk to first.</p>
+        </li>
+        <li>
+          <span class="step-tool">Excel</span>
+          <h3>Built the savings model</h3>
+          <p>A what-if model leadership can adjust: change the target rate or cost assumption and see the savings.</p>
+        </li>
+        <li>
+          <span class="step-tool">Power BI</span>
+          <h3>Made it easy to monitor</h3>
+          <p>An interactive dashboard that turns a one-off analysis into a monthly HR review.</p>
+        </li>
+      </ol>
+      <details class="sample">
+        <summary>See a sample of the analysis</summary>
+        <p class="muted small">Does overtime affect who leaves? Group employees by overtime hours and compare what share of each group left in 2025.</p>
+<pre><code>SELECT CASE
+         WHEN MonthlyOvertimeHours &lt;= 10 THEN '0-10 hrs'
+         WHEN MonthlyOvertimeHours &lt;= 20 THEN '11-20 hrs'
+         ELSE 'Over 20 hrs'
+       END                                       AS OvertimeBand,
+       COUNT(*)                                  AS Employees,
+       ROUND(100.0 * SUM(LeftIn2025) / COUNT(*), 1) AS PctLeft
+FROM   product_teams_2025
+GROUP  BY OvertimeBand;</code></pre>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">[Your Name]</p>
+        <p class="muted">Business Analyst · SQL · Excel · Power BI</p>
+        <p class="links">
+          <a href="mailto:you@example.com">Email</a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/your-username/workforce-attrition-analytics" target="_blank" rel="noopener">View source</a>
+        </p>
+      </div>
+      <p class="muted small data-note"><strong>About the data:</strong> NimbusTech is a fictional company. The dataset is synthetic: 1,632 employee records from 2023–2025, designed to reflect attrition patterns common in the tech industry. Replacement cost assumes 50% of salary for product roles.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

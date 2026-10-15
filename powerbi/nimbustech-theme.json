@@ -1,0 +1,32 @@
+{
+  "name": "NimbusTech Briefing",
+  "dataColors": ["#C8461B", "#B9B0A2", "#14213D", "#6F6A60", "#E8A07F", "#3D4760", "#D9D0C1", "#8C5A3C"],
+  "background": "#FFFFFF",
+  "foreground": "#14213D",
+  "tableAccent": "#C8461B",
+  "good": "#3D4760",
+  "neutral": "#B9B0A2",
+  "bad": "#C8461B",
+  "maximum": "#C8461B",
+  "center": "#F3D9CC",
+  "minimum": "#FFFFFF",
+  "textClasses": {
+    "title": { "fontFace": "Georgia", "color": "#14213D", "fontSize": 13 },
+    "header": { "fontFace": "Segoe UI Semibold", "color": "#14213D", "fontSize": 11 },
+    "label": { "fontFace": "Segoe UI", "color": "#3D4760", "fontSize": 10 },
+    "callout": { "fontFace": "Georgia", "color": "#14213D", "fontSize": 28 }
+  },
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F6F2EA" } }, "transparency": 0 }]
+      }
+    },
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#D9D0C1" } }, "radius": 2 }]
+      }
+    }
+  }
+}
